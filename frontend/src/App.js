@@ -1,18 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import SessionSet from "./components/sessionSet.js";
-import SessionGet from "./components/sessionGet.js";
-import SessionDelete from "./components/sessionDelete.js";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path ="/" element={<SessionGet />} />
-        <Route path ="/sessionSet/:id" element={<SessionSet />} />
-        <Route path ="/sessionDelete" element={<SessionDelete />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
-}
+};
+
 export default App;
