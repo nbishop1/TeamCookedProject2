@@ -35,8 +35,8 @@ const dbo = require("./db/conn");
 
 app.use(express.json());
 
-app.use(require("./routes/accounts"));
 app.use(require("./routes/session"));
+app.use(require("./routes/hangman"));
 
 app.get("/", (req,res) => {
     res.send("Hello, World");
